@@ -48,11 +48,14 @@ Your host OS can be Fedora, Arch, Ubuntu, or anything.
 
 Fedora:
 `sudo dnf install docker`
+
 `sudo systemctl enable --now docker`
 
 Ubuntu:
-sudo apt install docker.io
-sudo systemctl start docker
+
+`sudo apt install docker.io`
+
+`sudo systemctl start docker`
 
 Start a container with your home directory mounted:
 
@@ -67,11 +70,13 @@ Anything copied into /work is saved outside the container.
 Inside the Ubuntu 18.04 container:
 
 `apt update`
+
 `apt install -y build-essential gawk unzip wget rsync file`
 
 find the correct link for the ImageBuilder (example: ar71xx tiny):
 
 `cd /root`
+
 `wget https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64.tar.xz`
 
 [The link depends on your router's model. DON'T USE THIS LINK IF NOT USING TL-WR841N-V11]
