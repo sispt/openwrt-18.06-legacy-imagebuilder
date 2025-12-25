@@ -12,9 +12,9 @@ This project shows how to build optimized firmware for them using Docker and Ima
 
 ---
 
-## What this project does
+## What these instructions do
 
-It creates a custom firmware image that includes:
+They create a custom firmware image that includes:
 
 - WiFi
 - Firewall and NAT
