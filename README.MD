@@ -47,8 +47,8 @@ Your host OS can be Fedora, Arch, Ubuntu, or anything.
 # Docker install
 
 Fedora:
-sudo dnf install docker
-sudo systemctl enable --now docker
+`sudo dnf install docker`
+`sudo systemctl enable --now docker`
 
 Ubuntu:
 sudo apt install docker.io
@@ -56,7 +56,7 @@ sudo systemctl start docker
 
 Start a container with your home directory mounted:
 
-docker run -it --rm -v $HOME:/work ubuntu:18.04
+`docker run -it --rm -v $HOME:/work ubuntu:18.04`
 
 This makes /work inside the container point to your real $HOME folder.
 
@@ -66,23 +66,24 @@ Anything copied into /work is saved outside the container.
 
 Inside the Ubuntu 18.04 container:
 
-apt update
-apt install -y build-essential gawk unzip wget rsync file
+`apt update`
+`apt install -y build-essential gawk unzip wget rsync file`
 
 find the correct link for the ImageBuilder (example: ar71xx tiny):
 
-cd /root
-wget https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64.tar.xz
+`cd /root`
+`wget https://downloads.openwrt.org/releases/18.06.9/targets/ar71xx/tiny/openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64.tar.xz`
+
 [The link depends on your router's model. DON'T USE THIS LINK IF NOT USING TL-WR841N-V11]
 
 
-tar xf openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64.tar.xz
+`tar xf openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64.tar.xz`
 
-cd openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64
+`cd openwrt-imagebuilder-18.06.9-ar71xx-tiny.Linux-x86_64`
 
 ## Build firmware:
 
-make image PACKAGES="-ppp -ppp-mod-pppoe iptables iptables-mod-ipopt wget"
+`make image PACKAGES="-ppp -ppp-mod-pppoe iptables iptables-mod-ipopt wget"`
 
 `` add - before a package's name to exclude it `` 
 
